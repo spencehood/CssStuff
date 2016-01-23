@@ -1,0 +1,210 @@
+body {
+    font-family: serif;
+    font-size: 25px;
+    color: #6b6b6b;
+    cursor: url('images/mouse.cur'), default;
+    background: url(images/bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+#lighter {
+    height: 80%;
+    width: 80%;
+    position: fixed;
+    left: 50%;
+    margin: 5% 0 0 -40%;
+    z-index: -10;
+    background: #fff;
+    box-shadow: 0px 0px 100px #fff;
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -o-filter: blur(50px);
+    -ms-filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0.5;
+}
+.purple {
+    color: rgb(175, 78, 147);   
+}
+.green {
+    color: rgb(76, 216, 90);
+    transition: 0.12s linear;
+}
+.blue {
+    color: rgb(50, 161, 215);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+::selection {
+    background: rgb(255, 123, 123);
+    color: #fff;
+}
+::-moz-selection {
+    background: rgb(255, 123, 123);
+    color: #fff;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    color: #939393;
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+        header {
+            width: 100%;
+            height: 100px;
+            font-size: 23px;
+            z-index: 3;
+        }
+        header img {
+            height: 100%;
+            display: inline-block;
+            /*display: none;*/
+        }
+        nav {
+            float: right;
+            width: 50%;
+            height: 100%;
+            position: relative;
+            display: inline-block;
+        }
+        .link {
+            width: 23%;
+            height: 100%;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            line-height: 95px;
+        }
+
+/* -- Menu bar transition stuff --*/
+
+#current-page {
+    border-top: 5px solid rgba(76, 216, 90, 0.7);   
+}
+#dropdown {
+    font-size: 16px;
+    height: 90px;
+    position: absolute;
+    line-height: 31px;
+    text-align: left;
+    margin-top: -25px;
+    padding-left: 25px;
+    border-left: 3px solid rgba(76, 216, 90, 0.7);
+    display: block;
+    opacity: 0;
+    white-space: nowrap;
+}
+#current-sub {
+    color: #4cd85a;
+}
+.sublink {
+    transition: 0.12s linear;
+    opacity: 0;   
+}
+.sublink:hover {
+    text-indent: 10px;
+}
+
+#home-spotlight, #myself-spotlight, #gallery-spotlight, #contact-spotlight {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    margin: 0 auto;
+    opacity: 0;
+    top: -5px;
+    transition: 0.23s linear;
+    background: -webkit-linear-gradient(rgba(107, 107, 107, 0.3), rgba(0, 0, 0, 0));
+    background: -moz-linear-gradient(rgba(107, 107, 107, 0.3), rgba(0, 0, 0, 0));
+    background: -o-linear-gradient(rgba(107, 107, 107, 0.3), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgba(107, 107, 107, 0.3), rgba(0, 0, 0, 0));
+}
+#myself-spotlight {
+    background: -webkit-linear-gradient(rgba(175, 78, 147, 0.3), rgba(0, 0, 0, 0));
+    background: -moz-linear-gradient(rgba(175, 78, 147, 0.3), rgba(0, 0, 0, 0));
+    background: -o-linear-gradient(rgba(175, 78, 147, 0.3), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgba(175, 78, 147, 0.3), rgba(0, 0, 0, 0));
+}
+#gallery-spotlight {
+    background: -webkit-linear-gradient(rgba(76, 216, 90, 0.3), rgba(0, 0, 0, 0));
+    background: -moz-linear-gradient(rgba(76, 216, 90, 0.3), rgba(0, 0, 0, 0));
+    background: -o-linear-gradient(rgba(76, 216, 90, 0.3), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgba(76, 216, 90, 0.3), rgba(0, 0, 0, 0));
+}   
+#contact-spotlight {
+    background: -webkit-linear-gradient(rgba(50, 161, 215, 0.3), rgba(0, 0, 0, 0));
+    background: -moz-linear-gradient(rgba(50, 161, 215, 0.3), rgba(0, 0, 0, 0));
+    background: -o-linear-gradient(rgba(50, 161, 215, 0.3), rgba(0, 0, 0, 0));
+    background: linear-gradient(rgba(50, 161, 215, 0.3), rgba(0, 0, 0, 0));
+}
+        .link:hover > #home-spotlight {
+            opacity: 1;
+        }
+        .link:hover > #myself-spotlight {
+            opacity: 1;
+        }
+        .link:hover > #gallery-spotlight {
+            opacity: 1;
+        }
+        .link:hover > #contact-spotlight {
+            opacity: 1;
+        }
+
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('images/load.gif') 50% 50% no-repeat #fff;
+}
+#social {
+    position: fixed;
+    z-index: 10;
+    bottom: 26px;
+    left: 20px;
+}
+#social img {
+    margin-top: 10px;
+    opacity: 0.3;
+    transition: 0.12s linear;
+}
+#social img:hover {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 1290px) {
+    header {
+        font-size: 20px;
+    }
+    nav {
+        width: 70%;
+    }
+    .link {
+        line-height: 75px;
+    }
+    #dropdown {
+        font-size: 14px;
+    }
+    footer {
+        font-size: 13px;
+    }
+}
+
+
+
+
+#menu {
+    float: right;
+    padding-right: 30px;
+    cursor: pointer;
+    display: none;
+} 
